@@ -11,7 +11,7 @@ import com.danieleperuzzi.navigation.R;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.fragment.NavHostFragment;
+import androidx.navigation.Navigation;
 
 public class FirstFragment extends Fragment {
 
@@ -26,7 +26,7 @@ public class FirstFragment extends Fragment {
         final Button button = view.findViewById(R.id.firstFragmentButton);
 
         button.setOnClickListener(buttonView -> {
-            NavHostFragment.findNavController(this).navigate(R.id.action_firstFragment_to_secondFragment);
+            Navigation.findNavController(buttonView).navigate(R.id.action_firstFragment_to_secondFragment);
         });
     }
 }
